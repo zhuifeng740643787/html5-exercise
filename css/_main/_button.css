@@ -1,0 +1,203 @@
+@charset "utf-8";
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 2px #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: 600;
+  height: 3.5em;
+  line-height: 3.5em;
+  letter-spacing: 0.25em;
+  padding: 0 1.75em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+input[type="submit"]:hover, 
+input[type="submit"]:active,
+input[type="reset"]:hover,
+input[type="reset"]:active,
+input[type="button"]:hover,
+input[type="button"]:active,
+button:hover,
+button:active,
+.button:hover,
+.button:active {
+  box-shadow: inset 0 0 0 2px #9bf1ff;
+  color: #9bf1ff;
+}
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active,
+button:active,
+.button:active {
+  background-color: rgba(155, 241, 255, 0.1);
+  box-shadow: inset 0 0 0 2px #53e3fb;
+  color: #53e3fb;
+}
+input[type="submit"].icon:before,
+input[type="reset"].icon:before,
+input[type="button"].icon:before,
+button.icon:before,
+.button.icon:before {
+  margin-right: 0.5em; 
+}
+input[type="submit"].fit,
+input[type="reset"].fit,
+input[type="button"].fit,
+button.fit,
+.button.fit {
+  display: block;
+  margin: 0 0 1em 0;
+  width: 100%;
+}
+input[type="submit"].small,
+input[type="reset"].small,
+input[type="button"].small,
+button.small,
+.button.small {
+  font-size: 0.6em;
+}
+input[type="submit"].big,
+input[type="reset"].big,
+input[type="button"].big,
+button.big,
+.button.big {
+  font-size: 1.25em;
+  height: 3em;
+  line-height: 3em;
+}
+input[type="submit"].next,
+input[type="reset"].next,
+input[type="button"].next,
+button.next,
+.button.next {
+  padding-right: 4.5em;
+  position: relative;
+}
+input[type="submit"].next:before,
+input[type="submit"].next:after,
+input[type="reset"].next:before,
+input[type="reset"].next:after,
+input[type="button"].next:before,
+input[type="button"].next:after,
+button.next:before,
+button.next:after,
+.button.next:before, 
+.button.next:after {
+  -moz-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 36px 24px;
+  content: '';
+  display: block;
+  width: 36px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 1.5em;
+  vertical-align: middle;
+}
+input[type="submit"].next:before,
+input[type="reset"].next:before,
+input[type="button"].next:before,
+button.next:before,
+.button.next:before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='https://www.w3.org/1999/xlink' width='36px' height='24px' viewBox='0 0 36 24' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 2px%3B %7D%3C/style%3E%3Cline x1='0' y1='12' x2='34' y2='12' /%3E%3Cline x1='25' y1='4' x2='34' y2='12.5' /%3E%3Cline x1='25' y1='20' x2='34' y2='11.5' /%3E%3C/svg%3E") 
+}
+input[type="submit"].next:after,
+input[type="reset"].next:after,
+input[type="button"].next:after,
+button.next:after,
+.button.next:after {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='https://www.w3.org/1999/xlink' width='36px' height='24px' viewBox='0 0 36 24' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %239bf1ff%3B stroke-width: 2px%3B %7D%3C/style%3E%3Cline x1='0' y1='12' x2='34' y2='12' /%3E%3Cline x1='25' y1='4' x2='34' y2='12.5' /%3E%3Cline x1='25' y1='20' x2='34' y2='11.5' /%3E%3C/svg%3E");
+  opacity: 0;
+  z-index: 1;
+}
+input[type="submit"].next:hover:after,
+input[type="submit"].next:active:after,
+input[type="reset"].next:hover:after,
+input[type="reset"].next:active:after,
+input[type="button"].next:hover:after,
+input[type="button"].next:active:after,
+button.next:hover:after,
+button.next:active:after,
+.button.next:hover:after,
+.button.next:active:after {
+  opacity: 1;
+}
+@media screen and (max-width: 1280px) {
+  input[type="submit"].next:after,
+  input[type="reset"].next:after,
+  input[type="button"].next:after,
+  button.next:after,
+  .button.next:after {
+    padding-left: 5em;
+  }
+}
+input[type="submit"].special,
+input[type="reset"].special,
+input[type="button"].special,
+button.special,
+.button.special {
+  background-color: #ffffff;
+  box-shadow: none;
+  color: #242943;
+}
+input[type="submit"].special:hover,
+input[type="submit"].special:active,
+input[type="reset"].special:hover,
+input[type="reset"].special:active,
+input[type="button"].special:hover,
+input[type="button"].special:active,
+button.special:hover,
+button.special:active,
+.button.special:hover, 
+.button.special:active {
+  background-color: #9bf1ff;
+  color: #242943 !important;
+}
+input[type="submit"].special:active,
+input[type="reset"].special:active,
+input[type="button"].special:active,
+button.special:active,
+.button.special:active {
+  background-color: #53e3fb; 
+}
+input[type="submit"].disabled,
+input[type="submit"]:disabled,
+input[type="reset"].disabled,
+input[type="reset"]:disabled,
+input[type="button"].disabled,
+input[type="button"]:disabled,
+button.disabled,
+button:disabled,
+.button.disabled,
+.button:disabled {
+  -moz-pointer-events: none;
+  -webkit-pointer-events: none;
+  -ms-pointer-events: none;
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.25;
+}

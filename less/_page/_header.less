@@ -1,0 +1,207 @@
+@large-height: 5em;
+@height: 3.5em;
+body.is-menus-visible {
+
+  &:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 10;
+  }
+  #header .menus {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0.5s ease;
+  }
+}
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: @height;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2em;
+  transition: height 0.5s ease, background-color 0.5s ease;
+  h1 {
+    font-size: 1.5em;
+    font-weight: 300 !important;
+    strong {
+      font-weight: 500;
+    }
+    margin: 0.5em 1em;
+  }
+  &.reveal {
+    height: @large-height;
+    background-color: transparent;
+    padding: 0.75em 2em;
+    h2, span {
+      color: #adb5bd;
+    }
+    .menus {
+      a > h2, a > span {
+        &:hover, &:active {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .menus {
+    a {
+      color: #788196;
+      overflow: hidden;
+      display: block;
+      vertical-align: middle;
+      height: 3em;
+      transition: color 0.2s ease;
+      h2 {
+        font-size: 0.8em;
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 0.5em;
+      }
+      span {
+        display: block;
+        height: 0.5em;
+        line-height: 0.5em;
+        font-size: 0.5em;
+        font-weight: 200em;
+      }
+      
+    }
+    & > ul > li {
+      display: inline-block;
+      position: relative;
+      padding: 0.85em 1em;
+      height: @height;
+      line-height: @height;
+      & > ul {
+        position: absolute;
+        top: 3em;
+        left: -25%;
+        width: 150%;
+        padding: 1em;
+        opacity: 0;
+        visibility: hidden;
+        li {
+          height: 1.2em;
+          line-height: 1.2em;
+          margin: 0.5em 0.8em;
+          a {
+            font-size: 0.8em;
+            color: #000000;
+          }
+        }
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease,
+        opacity 0.3s ease-in-out;
+        &.active {
+          top: @height;
+          background-color: #ffffff;
+          max-height: 10em;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      &:last-child {
+        display: none;
+        color: #515768;
+      }
+    }
+    & > i {
+      display: none;
+    }
+    @media screen and (max-width: @medium) {
+      & {
+        padding: @height 0;
+        width: 15em;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(15em);
+        transition: transform 0.5s cubic-bezier(0.19,1,0.22,1), opacity 0.5s ease;
+        background-color: #2b303b;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        & > ul > li {
+          display: block;
+          padding: 0.85em 0;
+          & > a {
+            padding: 0 2em;
+          }
+          &:last-child {
+            display: block;
+            padding-left: 2em;
+            span {
+              font-size: 0.8em;
+            }
+          }
+          height: auto;
+          line-height: auto;
+          overflow: visible;
+          & > ul {
+            left: 0;
+            top: 0;
+            width: 100%;
+            a {
+              padding: 0;
+            }
+            position: relative;
+            display: none;
+            &.active {
+              top: 0.5em;
+              background-color: #21252e;
+              max-height: 10em;
+              display: block;
+              a {
+                color: #7d818d;
+              }
+            }
+          }
+        }
+        & > i {
+          display: block;
+          position: absolute;
+          right: 1em;
+          top: 1em;
+          color: #788196;
+        }
+      }
+    }
+  }
+  .actions {
+
+    & ul > li {
+      display: inline-block;
+      height: @height;
+      line-height: @height;
+      a {
+        color: #ffffff;
+      }
+      & + li {
+        margin-left: 1em;
+      }
+      &:last-child {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        @media screen and (max-width: @medium) {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+  }
+}

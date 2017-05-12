@@ -1,0 +1,23 @@
+@charset "utf-8";
+#info {
+  padding: 2em 3em;
+  background-color: #2a2e4b;
+}
+#info article header{
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: -ms-max-content;
+  width: -o-max-content;
+  width: max-content;
+}
+#info article header:after{
+  width: 120%;
+}
+#info article .content {
+  flex-direction: column;
+  margin: 1.5em 0;
+}
+#info article .content p{
+  margin-bottom: 2em;
+  text-transform: none;
+} 
