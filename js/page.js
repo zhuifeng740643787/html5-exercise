@@ -24,6 +24,7 @@
   })
 
 
+  var deferred = $.Deferred().resolve();
   $window = $(window);
   $body = $('body');
   var $header = $('#header');
